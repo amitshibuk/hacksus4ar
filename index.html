@@ -26,26 +26,16 @@
     <a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceWidth: 1280; sourceHeight: 720;' vr-mode-ui="enabled: false">
       <!-- AR Marker -->
       <a-marker id="animated-marker" type='barcode' value='4' size="0.02">
-        <!-- Looping Animated 3D Model -->
+        <a-assets>
+            <a-asset-item id="glb-asset" src="hacksus_h.glb"></a-asset-item>
+        </a-assets>
         <a-entity 
-          gltf-model="hacksus_h.glb" 
+          gltf-model="#glb-asset" 
           position="0 0 0.5"
           scale="4 4 4"
           animation-mixer>
         </a-entity>
       </a-marker>
-
-      <script>
-        document.querySelector("#animatedModel").addEventListener("model-loaded", function () {
-          let entity = this;
-          let mixer = new THREE.AnimationMixer(entity.getObject3D("mesh"));
-          entity.mixer = mixer;
-          
-          let action = mixer.clipAction(entity.getObject3D("mesh").animations[0]);
-          action.setLoop(THREE.LoopRepeat);
-          action.play();
-        });
-      </script>
 
       <a-entity camera></a-entity>
     </a-scene>
