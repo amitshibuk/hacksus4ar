@@ -30,13 +30,20 @@
         <a-entity 
           gltf-model="hacksus_h.glb" 
           position="0 0 0.5"
-          scale="4 4 4">
+          scale="4 4 4"
+          animation-mixer>
         </a-entity>
       </a-marker>
 
       <script>
         document.querySelector("#animatedModel").addEventListener("model-loaded", function () {
-          this.setAttribute("animation-mixer", "clip: *; loop: repeat; timeScale: 1");
+          let entity = this;
+          let mixer = new THREE.AnimationMixer(entity.getObject3D("mesh"));
+          entity.mixer = mixer;
+          
+          let action = mixer.clipAction(entity.getObject3D("mesh").animations[0]);
+          action.setLoop(THREE.LoopRepeat);
+          action.play();
         });
       </script>
 
