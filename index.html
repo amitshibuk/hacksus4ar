@@ -30,10 +30,15 @@
         <a-entity 
           gltf-model="hacksus_h.glb" 
           position="0 0 0.5"
-          scale="4 4 4"
-          animation-mixer>
+          scale="4 4 4">
         </a-entity>
       </a-marker>
+
+      <script>
+        document.querySelector("#animatedModel").addEventListener("model-loaded", function () {
+          this.setAttribute("animation-mixer", "clip: *; loop: repeat; timeScale: 1");
+        });
+      </script>
 
       <a-entity camera></a-entity>
     </a-scene>
