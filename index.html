@@ -23,18 +23,24 @@
   </head>
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs='debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
-      
+        
+       <!-- Ambient Light (Soft Global Light) -->
+       <a-light type="ambient" color="#ffffff" intensity="1"></a-light>
+
+       <!-- Directional Light (Simulates Sunlight) -->
+       <a-light type="directional" position="1 2 1" intensity="0.8"></a-light>
+
+       <!-- Point Light (Glows from a specific point) -->
+       <a-light type="point" position="0 3 0" intensity="1.5" color="white"></a-light>
       <!-- AR Marker -->
       <a-marker id="animated-marker" type='barcode' value='4'>
-        
         <!-- Looping Animated 3D Model -->
         <a-entity 
           gltf-model="hacksus_h.glb" 
           position="0 0 0"
-          scale="3 3 3"
+          scale="10 10 10"
           animation-mixer>
         </a-entity>
-      
       </a-marker>
 
       <a-entity camera></a-entity>
