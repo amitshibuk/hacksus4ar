@@ -3,9 +3,26 @@
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/ar.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
+    <style>
+        body {
+          margin: 0;
+          overflow: hidden;
+        }
+        .logo-container {
+          position: fixed;
+          bottom: 10px;
+          left: 50%;
+          transform: translateX(-50%); /* Optional: Background for contrast */
+          padding: 5px;
+          border-radius: 8px;
+        }
+        .logo-container img {
+          height: 150px; /* Adjust logo size */
+        }
+      </style>
   </head>
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
+    <a-scene embedded arjs="debugUIEnabled: false">
       
       <!-- AR Marker -->
       <a-marker preset="hiro">
@@ -22,5 +39,10 @@
 
       <a-entity camera></a-entity>
     </a-scene>
+
+    <div class="logo-container">
+        <img src="HackSUS-logo full.png" alt="Logo">
+      </div>
+
   </body>
 </html>
