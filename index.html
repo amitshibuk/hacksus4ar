@@ -22,7 +22,14 @@
         }
       </style>
   </head>
-  <body style="margin: 0; overflow: hidden;">
+  <body style="margin: 0px; overflow: hidden;">
+
+    <div class="popup" id="popup">
+        <p>Point to the bar-code beside the QR code</p>
+        <button onclick="closePopup()">OK</button>
+      </div>
+
+
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceWidth: 1280; sourceHeight: 720;' vr-mode-ui="enabled: false">
       <!-- AR Marker -->
       <a-assets>
@@ -45,6 +52,16 @@
     <div class="logo-container">
         <img src="HackSUS-logo full.png" alt="Logo">
       </div>
+
+      <script>
+        function closePopup() {
+          document.getElementById("popup").style.display = "none";
+        }
+  
+        document.querySelector("#animatedModel").addEventListener("model-loaded", function () {
+          this.setAttribute("animation-mixer", "clip: *; loop: repeat; timeScale: 1");
+        });
+      </script>
 
   </body>
 </html>
