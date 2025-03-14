@@ -24,11 +24,6 @@
   </head>
   <body style="margin: 0px; overflow: hidden;">
 
-    <div class="popup" id="popup">
-        <p>Point to the bar-code beside the QR code</p>
-        <button onclick="closePopup()">OK</button>
-      </div>
-
 
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3; sourceWidth: 1280; sourceHeight: 720;' vr-mode-ui="enabled: false">
       <!-- AR Marker -->
@@ -37,8 +32,8 @@
     </a-assets>
       <a-marker id="animated-marker" type='barcode' value='4' size="0.02">
         <!-- fml-->
-        <a-entity
-        animation-mixer="clip: *; loop: repeat; timeScale: 1;" 
+        <a-entity 
+          id="animatedModel"
           gltf-model="#glb-asset" 
           position="0 0 0.5"
           scale="1 1 1">
@@ -53,13 +48,12 @@
       </div>
 
       <script>
-        function closePopup() {
-          document.getElementById("popup").style.display = "none";
-        }
-  
+        prompt("Point at the Barcode next to the QR")
+
         document.querySelector("#animatedModel").addEventListener("model-loaded", function () {
-          this.setAttribute("animation-mixer", "clip: *; loop: repeat; timeScale: 1");
+        this.setAttribute("animation-mixer", "clip: *; loop: repeat; timeScale: 1");
         });
+
       </script>
 
   </body>
