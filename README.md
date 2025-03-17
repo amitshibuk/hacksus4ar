@@ -6,11 +6,11 @@ Hosted on [Netilify](https://hacksusar.netlify.app/)
 
 ##_Screenshots_
 
-![Screenshot1](https://imgur.com/9OexGSj)
+![Screenshot1](https://i.imgur.com/9OexGSj.png)
 
-![Screenshot2](https://imgur.com/6HvWToh)
+![Screenshot2](https://i.imgur.com/6HvWToh.png)
 
 ### _Card Designs_
 
-![Card-Front ](https://imgur.com/6xsaVwH)
-![Card2-Back](https://imgur.com/mIzHhjZ)
+![Card-Front ](https://i.imgur.com/6xsaVwH.png)
+![Card2-Back](https://i.imgur.com/mIzHhjZ.png)
