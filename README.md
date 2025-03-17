@@ -4,13 +4,15 @@ An AR Card I made for [HackS'US EDITION IV](https://api.unstop.com/hackathons/ha
 
 Hosted on [Netilify](https://hacksusar.netlify.app/)
 
-##_Screenshots_
-
-![Screenshot1](https://i.imgur.com/9OexGSj.png)
-
-![Screenshot2](https://i.imgur.com/6HvWToh.png)
+## _Screenshots_
+<p align="center">
+  <img src="https://i.imgur.com/9OexGSj.png" alt="Phone SS 1" width=300px style="margin-right:10px;">
+  <img src="https://i.imgur.com/6HvWToh.png" alt="Phone SS 2" width=300px>
+</p>
 
 ### _Card Designs_
 
-![Card-Front ](https://i.imgur.com/6xsaVwH.png)
-![Card2-Back](https://i.imgur.com/mIzHhjZ.png)
+<p align="center">
+  <img src="https://i.imgur.com/6xsaVwH.png" alt="Card-Front" width=400px style="margin-right:10px;">
+  <img src="https://i.imgur.com/mIzHhjZ.png" alt="Card2-Back" width=400px>
+</p>
